@@ -15,10 +15,3 @@ class PayrollDeduction:
         return self.__charge_amt
     def get_employee_id(self):
         return self.__employee_id
-
-
-    def deduction(self, charge_amt):
-        self.__balance -= abs(charge_amt)
-
-    def get_net_pay(self):
-        return self.__balance
