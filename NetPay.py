@@ -12,15 +12,15 @@ def main():
     Deduction4 = P.PayrollDeduction('vending machine', '8/22/2022', 3.00, 58475)
     Deduction5 = P.PayrollDeduction('vending machine', '8/5/2022', 2.75, 58475)
 
-    if Deduction1.get_employee_id == Jimmy.get_id_number:
-        balance.deduction(Deduction1.get_charge_amt)
-    if Deduction2.get_employee_id == Jimmy.get_id_number:
+    if Deduction1.get_employee_id() == Jimmy.get_id_number():
+        balance -= Deduction1.get_charge_amt()
+    if Deduction2.get_employee_id() == Jimmy.get_id_number():
         balance.deduction(Deduction2.get_charge_amt)
-    if Deduction3.get_employee_id == Jimmy.get_id_number:
+    if Deduction3.get_employee_id() == Jimmy.get_id_number():
         balance.deduction(Deduction3.get_charge_amt)
-    if Deduction4.get_employee_id == Jimmy.get_id_number:
+    if Deduction4.get_employee_id() == Jimmy.get_id_number():
         balance.deduction(Deduction4.get_charge_amt)
-    if Deduction5.get_employee_id == Jimmy.get_id_number:
+    if Deduction5.get_employee_id() == Jimmy.get_id_number():
         balance.deduction(Deduction5.get_charge_amt)
 
     print('*** Employee Pay ***')
@@ -28,8 +28,8 @@ def main():
     print('ID Number: ', Jimmy.get_id_number())
     print('Department: ', Jimmy.get_department())
     print('Gross Pay: $', format(Jimmy.get_monthly_salary(), ',.2f'), sep='')
-    print(balance)
-    print('Net Pay: $', format(balance.get_net_pay(), ',.2f'), sep='')
+    print('Net Pay: $', format(balance, ',.2f'), sep='')
+    #print(balance.get_net_pay(), ',.2f'), sep='')
 
 main()
 

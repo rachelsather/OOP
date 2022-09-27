@@ -22,5 +22,3 @@ class PayrollDeduction:
 
     def get_net_pay(self):
         return self.__balance
-
-    
